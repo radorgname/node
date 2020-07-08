@@ -1,0 +1,11 @@
+description: A job that does very little other than demonstrate what a parameterized job looks like
+
+executor: default
+
+parameters:
+  saywhat:
+    description: "To whom shall we say hello?"
+    default: "World"
+    type: string
+steps:
+  - run: echo "Hello << parameters.saywhat >>"

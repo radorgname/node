@@ -2,20 +2,12 @@ version: 2.1
 
 description: |
   A simple "Hello, World!" orb
-executors:
-  default:
-    docker:
-      - image: bash:4.4.19
 
-jobs:
-  hello-build:
-    parameters:
-      to:
-        type: string
-        default: "${CIRCLE_USERNAME}"
-    executor: default
-    steps:
-      - hello-triggerer:
-          to: <<parameters.to>>
-      - circleci-env-highlights
-      - system-info
+# executors:
+#   default:
+#     docker:
+#       - image: bash:4.4.19
+
+# jobs:
+#   steps:
+#     - saywhat
